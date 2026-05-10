@@ -1,0 +1,150 @@
+/* style.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:40px;
+    transition:0.3s;
+}
+
+.container{
+    width:100%;
+    max-width:700px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:20px;
+}
+
+.top-bar{
+    display:flex;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+#searchInput{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+}
+
+textarea{
+    width:100%;
+    height:120px;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    resize:none;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+button{
+    border:none;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.save-btn{
+    width:100%;
+    background:#00c853;
+    color:white;
+    margin-bottom:20px;
+}
+
+.note-card{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:15px;
+    animation:fadeIn 0.4s ease;
+}
+
+.note-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.note-text{
+    margin:10px 0;
+    color:#333;
+}
+
+.note-date{
+    font-size:12px;
+    color:gray;
+}
+
+.note-actions{
+    display:flex;
+    gap:10px;
+}
+
+.delete-btn{
+    background:red;
+    color:white;
+}
+
+.edit-btn{
+    background:orange;
+    color:white;
+}
+
+.dark-mode{
+    background:#121212;
+}
+
+.dark-mode .container{
+    background:rgba(0,0,0,0.4);
+}
+
+.dark-mode textarea,
+.dark-mode #searchInput{
+    background:#222;
+    color:white;
+}
+
+.dark-mode .note-card{
+    background:#1e1e1e;
+    color:white;
+}
+
+.dark-mode .note-text{
+    color:white;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

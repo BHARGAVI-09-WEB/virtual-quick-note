@@ -1,0 +1,48 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNote Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📝 QuickNote Pro</h1>
+
+    <div class="top-bar">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search notes..."
+            onkeyup="searchNotes()"
+        >
+
+        <button onclick="toggleDarkMode()">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+    <textarea
+        id="noteInput"
+        placeholder="Write your note here..."
+    ></textarea>
+
+    <button class="save-btn" onclick="saveNote()">
+        Save Note
+    </button>
+
+    <div id="notesContainer"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
